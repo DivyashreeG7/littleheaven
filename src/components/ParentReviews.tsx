@@ -19,9 +19,9 @@ export const ParentReviews: React.FC = () => {
   const set1 = reviewsList.slice(0, Math.ceil(reviewsList.length / 2));
   const set2 = reviewsList.slice(Math.ceil(reviewsList.length / 2));
 
-  // Repeat each set 4 times for seamless infinite loop
-  const marqueeSet1 = [...set1, ...set1, ...set1, ...set1];
-  const marqueeSet2 = [...set2, ...set2, ...set2, ...set2];
+  // Repeat each set 2 times for exact 50% seamless infinite loop
+  const marqueeSet1 = [...set1, ...set1];
+  const marqueeSet2 = [...set2, ...set2];
 
   const handleAddReviewSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,7 +49,7 @@ export const ParentReviews: React.FC = () => {
   };
 
   return (
-    <section id="reviews" className="relative py-20 lg:py-28 bg-gradient-to-b from-white via-sky-50/20 to-blue-50/30 overflow-hidden">
+    <section id="reviews" className="scroll-mt-24 sm:scroll-mt-28 relative py-20 lg:py-28 bg-white overflow-hidden">
       
       {/* Background ambient glowing blurs */}
       <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl pointer-events-none" />
@@ -59,15 +59,17 @@ export const ParentReviews: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold tracking-wide uppercase">
-            <Heart className="w-3.5 h-3.5 text-blue-600 fill-blue-500/20" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100/90 border border-blue-200 text-blue-900 text-xs font-extrabold tracking-wide uppercase shadow-xs">
+            <Heart className="w-3.5 h-3.5 text-blue-600 fill-blue-600" />
             <span>Parent Testimonials</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
             Loved by Parents, <br />
-            <span className="text-gradient-primary">Cherished by Children</span>
+            <span className="bg-gradient-to-r from-blue-700 via-sky-600 to-blue-800 bg-clip-text text-transparent drop-shadow-xs">
+              Cherished by Children
+            </span>
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg">
+          <p className="text-slate-700 text-base sm:text-lg font-medium">
             Hear directly from our vibrant community of parents about their child's transformational journey at Little's Heaven Child Care & Early Learning.
           </p>
 
@@ -91,7 +93,7 @@ export const ParentReviews: React.FC = () => {
               </div>
               <div className="h-4 w-px bg-slate-200 hidden sm:block" />
               <span className="text-xs sm:text-sm font-bold text-slate-700">
-                Based on <strong>11 Google Reviews</strong>
+                Based on <strong>Google Reviews</strong>
               </span>
             </div>
           </div>
@@ -111,30 +113,17 @@ export const ParentReviews: React.FC = () => {
             {marqueeSet1.map((rev, index) => (
               <div
                 key={`set1-${rev.id}-${index}`}
-                className="w-80 sm:w-96 glass-card glass-card-hover p-6 rounded-[28px] border border-white/90 bg-white/80 shadow-[0_10px_30px_rgba(37,99,235,0.06)] shrink-0 whitespace-normal flex flex-col justify-between hover:-translate-y-1.5 transition-transform duration-300"
+                className="w-[280px] sm:w-[350px] p-5 sm:p-6 rounded-[22px] sm:rounded-[26px] border border-slate-200/80 bg-white shadow-[0_6px_20px_rgba(37,99,235,0.05)] shrink-0 whitespace-normal flex flex-col justify-center space-y-3 hover:shadow-[0_12px_28px_rgba(37,99,235,0.1)] transition-all duration-300 select-none"
               >
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <div className="flex text-amber-400">
-                      {[...Array(rev.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-amber-400" />
-                      ))}
-                    </div>
-                  </div>
-
-                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal line-clamp-4 italic">
-                    "{rev.reviewText}"
-                  </p>
+                <div className="flex text-amber-400">
+                  {[...Array(rev.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400" />
+                  ))}
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-                  <div>
-                    <h4 className="text-xs font-bold text-slate-900">{rev.name}</h4>
-                    <p className="text-[10px] text-blue-600 font-semibold">
-                      Parent of {rev.childName} • {rev.childClass}
-                    </p>
-                  </div>
-                </div>
+                <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium italic">
+                  "{rev.reviewText}"
+                </p>
               </div>
             ))}
           </div>
@@ -149,30 +138,17 @@ export const ParentReviews: React.FC = () => {
             {marqueeSet2.map((rev, index) => (
               <div
                 key={`set2-${rev.id}-${index}`}
-                className="w-80 sm:w-96 glass-card glass-card-hover p-6 rounded-[28px] border border-white/90 bg-white/80 shadow-[0_10px_30px_rgba(37,99,235,0.06)] shrink-0 whitespace-normal flex flex-col justify-between hover:-translate-y-1.5 transition-transform duration-300"
+                className="w-[280px] sm:w-[350px] p-5 sm:p-6 rounded-[22px] sm:rounded-[26px] border border-slate-200/80 bg-white shadow-[0_6px_20px_rgba(37,99,235,0.05)] shrink-0 whitespace-normal flex flex-col justify-center space-y-3 hover:shadow-[0_12px_28px_rgba(37,99,235,0.1)] transition-all duration-300 select-none"
               >
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <div className="flex text-amber-400">
-                      {[...Array(rev.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-amber-400" />
-                      ))}
-                    </div>
-                  </div>
-
-                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal line-clamp-4 italic">
-                    "{rev.reviewText}"
-                  </p>
+                <div className="flex text-amber-400">
+                  {[...Array(rev.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400" />
+                  ))}
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-                  <div>
-                    <h4 className="text-xs font-bold text-slate-900">{rev.name}</h4>
-                    <p className="text-[10px] text-blue-600 font-semibold">
-                      Parent of {rev.childName} • {rev.childClass}
-                    </p>
-                  </div>
-                </div>
+                <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium italic">
+                  "{rev.reviewText}"
+                </p>
               </div>
             ))}
           </div>
@@ -273,7 +249,7 @@ export const ParentReviews: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-full text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-sky-500 shadow-md hover:scale-105 transition-all cursor-pointer"
+                  className="btn-shine-sweep w-full py-3 rounded-full text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 shadow-md shadow-blue-600/20 hover:scale-105 transition-all cursor-pointer"
                 >
                   Submit Story
                 </button>

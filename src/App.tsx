@@ -6,20 +6,12 @@ import { ProgramsSection } from './components/ProgramsSection';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { BookGallery } from './components/BookGallery';
 import { ParentReviews } from './components/ParentReviews';
+import { InstagramReels } from './components/InstagramReels';
 import { EnquirySection } from './components/EnquirySection';
 import { CampusTourModal } from './components/CampusTourModal';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { Footer } from './components/Footer';
 import { AnimatedSection } from './components/AnimatedSection';
-import {
-  HeroToMissionDivider,
-  MissionToProgramsDivider,
-  ProgramsToTimelineDivider,
-  WhyChooseUsToGalleryDivider,
-  GalleryToReviewsDivider,
-  ReviewsToContactDivider,
-  ContactToFooterDivider
-} from './components/SectionDividers';
 
 export default function App() {
   const [tourModalOpen, setTourModalOpen] = useState(false);
@@ -40,7 +32,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#F8FCFF] text-slate-800 font-sans selection:bg-sky-200 selection:text-blue-900 overflow-x-hidden">
+    <div className="relative min-h-screen w-full max-w-full bg-[#F8FCFF] text-slate-800 font-sans selection:bg-sky-200 selection:text-blue-900 overflow-x-hidden">
       {/* Sticky Glass Navbar */}
       <Navbar
         onOpenEnroll={() => handleOpenEnroll()}
@@ -53,16 +45,10 @@ export default function App() {
         onExplorePrograms={() => scrollToSection('programs')}
       />
 
-      {/* Decorative Divider: Cloud Waves with Sparkles */}
-      <HeroToMissionDivider />
-
       {/* Mission & Vision Section */}
       <AnimatedSection>
         <MissionVision />
       </AnimatedSection>
-
-      {/* Decorative Divider: Flowing Dotted Path & Swirls */}
-      <MissionToProgramsDivider />
 
       {/* Programs Section */}
       <AnimatedSection>
@@ -71,32 +57,25 @@ export default function App() {
         />
       </AnimatedSection>
 
-      {/* Decorative Divider into Why Choose Us */}
-      <ProgramsToTimelineDivider />
-
       {/* Why Choose Us */}
       <AnimatedSection>
         <WhyChooseUs />
       </AnimatedSection>
-
-      {/* Decorative Divider: Multi-Layer Soft Wave with Shimmer */}
-      <WhyChooseUsToGalleryDivider />
 
       {/* Photo Storybook Gallery */}
       <AnimatedSection>
         <BookGallery />
       </AnimatedSection>
 
-      {/* Decorative Divider: Bubble Cluster & Flowing Dotted Path */}
-      <GalleryToReviewsDivider />
-
       {/* Parent Reviews (Dual-Direction Carousels) */}
       <AnimatedSection>
         <ParentReviews />
       </AnimatedSection>
 
-      {/* Decorative Divider: Wavy Bridge into Contact Section */}
-      <ReviewsToContactDivider />
+      {/* As Seen On Instagram Reel Carousel Section */}
+      <AnimatedSection>
+        <InstagramReels />
+      </AnimatedSection>
 
       {/* Enquiry / Enrollment Form Section */}
       <AnimatedSection>
@@ -105,9 +84,6 @@ export default function App() {
           onOpenTour={() => setTourModalOpen(true)}
         />
       </AnimatedSection>
-
-      {/* Decorative Divider: Midnight Navy Wave & Star Constellation into Footer */}
-      <ContactToFooterDivider />
 
       {/* Footer */}
       <Footer />

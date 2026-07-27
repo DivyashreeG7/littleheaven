@@ -32,7 +32,7 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialProgramTi
   };
 
   return (
-    <section id="contact" className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-blue-50/40 via-white to-sky-50/50 overflow-hidden">
+    <section id="contact" className="scroll-mt-24 sm:scroll-mt-28 relative py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
       
       {/* Background Glow Blobs */}
       <div className="absolute top-12 left-10 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl pointer-events-none" />
@@ -75,13 +75,13 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialProgramTi
                 <div>
                   <h3 className="text-sm font-bold text-slate-900 mb-0.5">Address</h3>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=Little%27s+Heaven+Child+Care+%26+Early+Learning+Federal+Bank+Dasarahalli+Main+Rd+Bhuvaneswari+Nagar+Hebbal+Bengaluru+Karnataka+560024"
+                    href="https://www.google.com/maps/search/?api=1&query=Little%27s+Heaven+Child+Care+%26+Early+Learning+1st+floor+Federal+Bank+Dasarahalli+Main+Rd+Bhuvaneswari+Nagar+Hebbal+Bengaluru+Karnataka+560024"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-slate-600 hover:text-blue-600 leading-snug font-normal block transition-colors"
                   >
                     <strong className="text-slate-800 font-semibold block mb-0.5">Little's Heaven Child Care & Early Learning</strong>
-                    Federal Bank, Dasarahalli Main Rd, Bhuvaneswari Nagar, Hebbal, Bengaluru, Karnataka 560024 ↗
+                    1st floor Federal Bank, Dasarahalli Main Rd, Bhuvaneswari Nagar, Hebbal, Bengaluru, Karnataka 560024 ↗
                   </a>
                 </div>
               </div>
@@ -93,12 +93,10 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialProgramTi
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-slate-900 mb-0.5">Phone</h3>
-                  <a
-                    href="tel:+917736181828"
-                    className="text-sm text-slate-700 hover:text-blue-600 font-medium transition-colors"
-                  >
-                    +91 77361 81828
-                  </a>
+                  <div className="flex flex-col gap-1 text-sm text-slate-700 font-medium">
+                    <a href="tel:+917736181828" className="hover:text-blue-600 transition-colors">+91 77361 81828</a>
+                    <a href="tel:+917306426871" className="hover:text-blue-600 transition-colors">+91 73064 26871</a>
+                  </div>
                 </div>
               </div>
 
@@ -126,8 +124,8 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialProgramTi
                 <div>
                   <h3 className="text-sm font-bold text-slate-900 mb-0.5">Business Hours</h3>
                   <div className="text-sm text-slate-600 leading-snug font-normal space-y-0.5">
-                    <p><strong className="text-slate-800 font-semibold">Mon – Fri:</strong> 6:00 AM – 7:00 PM</p>
-                    <p><strong className="text-slate-800 font-semibold">Saturday:</strong> Opens at 6:00 AM</p>
+                    <p><strong className="text-slate-800 font-semibold">Mon – Fri:</strong> 7:00 AM – 8:00 PM</p>
+                    <p><strong className="text-slate-800 font-semibold">Saturday:</strong> Opens at 10:00 AM</p>
                     <p><strong className="text-slate-800 font-semibold">Sunday:</strong> Closed</p>
                   </div>
                 </div>
@@ -138,7 +136,7 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialProgramTi
             {/* Embedded Interactive Map Card */}
             <div className="pt-2 space-y-3">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Little%27s+Heaven+Child+Care+%26+Early+Learning+Federal+Bank+Dasarahalli+Main+Rd+Bhuvaneswari+Nagar+Hebbal+Bengaluru+Karnataka+560024"
+                href="https://www.google.com/maps/search/?api=1&query=Little%27s+Heaven+Child+Care+%26+Early+Learning+1st+floor+Federal+Bank+Dasarahalli+Main+Rd+Bhuvaneswari+Nagar+Hebbal+Bengaluru+Karnataka+560024"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-white/80 shadow-md bg-slate-100 group block cursor-pointer"
@@ -147,7 +145,7 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialProgramTi
                 {/* Google Maps Embed iframe */}
                 <iframe
                   title="Little's Heaven Child Care & Early Learning Location"
-                  src="https://maps.google.com/maps?q=Little%27s%20Heaven%20Child%20Care%20%26%20Early%20Learning%20Federal%20Bank%20Dasarahalli%20Main%20Rd%20Bhuvaneswari%20Nagar%20Hebbal%20Bengaluru%20Karnataka%20560024&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Little%27s%20Heaven%20Child%20Care%20%26%20Early%20Learning%201st%20floor%20Federal%20Bank%20Dasarahalli%20Main%20Rd%20Bhuvaneswari%20Nagar%20Hebbal%20Bengaluru%20Karnataka%20560024&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   className="w-full h-full border-0 grayscale-[0.05] contrast-[1.02] pointer-events-none"
                   loading="lazy"
                   referrerPolicy="no-referrer"
@@ -293,7 +291,7 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialProgramTi
                     <button
                       type="submit"
                       id="contact-send-message-btn"
-                      className="w-full py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-bold text-white bg-gradient-to-r from-blue-600 via-sky-500 to-blue-600 hover:opacity-95 btn-shine-sweep transition-all duration-300 shadow-md shadow-blue-500/20 flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]"
+                      className="btn-shine-sweep w-full py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-bold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 transition-all duration-300 shadow-md shadow-blue-600/20 flex items-center justify-center gap-2 cursor-pointer"
                     >
                       <Send className="w-4 h-4 shrink-0" />
                       <span>Send Message</span>

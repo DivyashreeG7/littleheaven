@@ -21,7 +21,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEnroll, onExplor
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden flex items-center bg-gradient-to-b from-sky-50/70 via-blue-50/30 to-white"
+      className="scroll-mt-24 sm:scroll-mt-28 relative min-h-screen pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden flex items-center bg-gradient-to-b from-sky-50/70 via-blue-50/30 to-white"
     >
       {/* Soft Ambient Glowing Aura */}
       <div className="absolute top-12 left-10 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
@@ -49,7 +49,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEnroll, onExplor
 
             {/* Authentic Body Copy */}
             <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-              Experience an ultra-modern, glassmorphic early learning sanctuary. We foster natural curiosity, emotional intelligence, and play-based discovery in a safe, loving environment.
+                Empowering young learners through innovative early childhood education, meaningful play, and compassionate care in a safe and stimulating environment designed for lifelong success
             </p>
 
             {/* CTA Group */}
@@ -106,16 +106,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEnroll, onExplor
               >
                 <div className="relative animate-float-slow rounded-[28px] sm:rounded-[34px] overflow-hidden shadow-[0_12px_30px_rgba(37,99,235,0.12)] border border-white/90 bg-white/80 group aspect-[4/5] sm:aspect-[3/4]">
                   <img
-                    src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=800&auto=format&fit=crop"
-                    alt="Toddler learning with blocks"
+                    src="/baby1.avif"
+                    alt="Little's Heaven Happy Toddler"
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
+                    decoding="async"
+                    draggable={false}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none select-none"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute top-3 left-3 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-sky-500 text-white rounded-2xl flex items-center justify-center font-black text-xl shadow-lg -rotate-12 border-2 border-white">
-                    A
-                  </div>
                 </div>
 
                 <div className="relative animate-float-slow rounded-[28px] sm:rounded-[34px] overflow-hidden shadow-[0_12px_30px_rgba(37,99,235,0.12)] border border-white/90 bg-white/80 group aspect-[4/5] sm:aspect-[3/4]">
@@ -123,13 +121,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEnroll, onExplor
                     src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=800&auto=format&fit=crop"
                     alt="Toddler girl playing"
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    decoding="async"
+                    draggable={false}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none select-none"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-3 left-3 z-10 w-9 h-9 sm:w-11 sm:h-11 bg-rose-500 text-white rounded-2xl flex items-center justify-center font-black text-lg shadow-lg -rotate-6 border-2 border-white">
-                    B
-                  </div>
                 </div>
               </motion.div>
 
@@ -140,25 +137,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEnroll, onExplor
               >
                 <div className="relative animate-float-reverse rounded-[28px] sm:rounded-[34px] overflow-hidden shadow-[0_12px_30px_rgba(37,99,235,0.12)] border border-white/90 bg-white/80 group aspect-[4/5] sm:aspect-[3/4]">
                   <img
-                    src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=800&auto=format&fit=crop"
-                    alt="Smiling preschool student"
+                    src="/baby2.avif"
+                    alt="Little's Heaven Preschooler"
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
+                    decoding="async"
+                    draggable={false}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none select-none"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute top-3 right-3 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-amber-400 text-amber-950 rounded-2xl flex items-center justify-center shadow-lg rotate-12 border-2 border-white">
-                    <span className="text-xl">💡</span>
-                  </div>
                 </div>
 
                 <div className="relative animate-float-reverse rounded-[28px] sm:rounded-[34px] overflow-hidden shadow-[0_12px_30px_rgba(37,99,235,0.12)] border border-white/90 bg-white/80 group aspect-[4/5] sm:aspect-[3/4]">
                   <img
-                    src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=800&auto=format&fit=crop"
-                    alt="Boy playing with toys"
+                    src="/baby4.avif"
+                    alt="Little's Heaven Early Learner"
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
+                    decoding="async"
+                    draggable={false}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none select-none"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent pointer-events-none" />
                 </div>

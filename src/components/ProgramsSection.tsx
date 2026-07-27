@@ -41,7 +41,7 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ onEnrollProgra
   };
 
   return (
-    <section id="programs" className="relative py-20 lg:py-28 bg-gradient-to-b from-blue-50/20 via-sky-50/30 to-white overflow-hidden">
+    <section id="programs" className="scroll-mt-24 sm:scroll-mt-28 relative py-20 lg:py-28 bg-blue-50/40 overflow-hidden">
       
       {/* Background soft glow blobs */}
       <div className="absolute top-20 right-10 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl pointer-events-none" />
@@ -80,9 +80,11 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ onEnrollProgra
                   <div className="relative w-full aspect-[16/11] rounded-[22px] overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-500 bg-slate-100">
                     <img
                       src={prog.image}
-                      alt={prog.title}
+                      alt={`${prog.title} Program at Little's Heaven Preschool`}
                       loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                      decoding="async"
+                      draggable={false}
+                      className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out pointer-events-none select-none"
                       referrerPolicy="no-referrer"
                     />
                     

@@ -31,7 +31,9 @@ const SinglePageCard: React.FC<{
             src={page.image}
             alt={page.title}
             loading="lazy"
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"
+            decoding="async"
+            draggable={false}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none select-none"
             referrerPolicy="no-referrer"
           />
 
@@ -205,7 +207,9 @@ const MobileAlbumStack: React.FC<{
                       src={item.image}
                       alt={item.title}
                       loading="lazy"
-                      className="w-full h-full object-cover pointer-events-none"
+                      decoding="async"
+                      draggable={false}
+                      className="w-full h-full object-cover pointer-events-none select-none"
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white text-blue-700 text-xs font-bold shadow-xs">
@@ -304,7 +308,7 @@ export const BookGallery: React.FC = () => {
   const underRight = animating === 'next' ? targetSpreadRight || activeSpreadRight : activeSpreadRight;
 
   return (
-    <section id="gallery" className="relative py-20 lg:py-28 bg-gradient-to-b from-blue-50/20 via-white to-sky-50/30 overflow-hidden">
+    <section id="gallery" className="scroll-mt-24 sm:scroll-mt-28 relative py-20 lg:py-28 bg-blue-50/40 overflow-hidden">
       
       {/* Background ambient glows */}
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl pointer-events-none" />
@@ -338,8 +342,8 @@ export const BookGallery: React.FC = () => {
         {/* DESKTOP VIEW: PHYSICAL 3D OPEN PHOTO ALBUM STAGE */}
         <div className="hidden md:block relative max-w-5xl mx-auto perspective-2000">
           
-          {/* Glassmorphism Hardcover Album Frame with Physical Page Stack Edges */}
-          <div className="relative bg-white/85 backdrop-blur-2xl border-2 border-white/95 rounded-[36px] sm:rounded-[44px] p-4 sm:p-6 lg:p-8 shadow-[0_25px_60px_rgba(37,99,235,0.16)] before:absolute before:-bottom-3 before:left-6 before:right-6 before:h-3 before:bg-slate-200/90 before:rounded-b-[24px] before:border-b before:border-slate-300/80 after:absolute after:-bottom-5 after:left-10 after:right-10 after:h-2.5 after:bg-slate-300/70 after:rounded-b-[18px]">
+          {/* Hardcover Album Frame */}
+          <div className="relative bg-white/90 backdrop-blur-2xl border border-white/95 rounded-[32px] sm:rounded-[40px] p-4 sm:p-6 lg:p-8 shadow-[0_20px_50px_rgba(37,99,235,0.12)]">
             
             {/* Book Spine Fold Crease Line in Center */}
             <div className="hidden md:block absolute top-4 bottom-4 left-1/2 -translate-x-1/2 w-7 bg-gradient-to-r from-slate-300/30 via-slate-600/30 to-slate-300/30 z-30 pointer-events-none rounded-full shadow-inner" />
@@ -432,7 +436,7 @@ export const BookGallery: React.FC = () => {
               onClick={handlePrev}
               disabled={animating !== null}
               id="gallery-book-prev-btn"
-              className="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-50 p-3.5 sm:p-4 rounded-full bg-white/90 backdrop-blur-xl border border-white/95 text-blue-600 shadow-2xl hover:bg-white hover:scale-110 active:scale-95 transition-all cursor-pointer disabled:opacity-50"
+              className="absolute left-2 sm:-left-3 lg:-left-6 top-1/2 -translate-y-1/2 z-50 p-3 sm:p-4 rounded-full bg-white/90 backdrop-blur-xl border border-white/95 text-blue-600 shadow-2xl hover:bg-white hover:scale-110 active:scale-95 transition-all cursor-pointer disabled:opacity-50"
               aria-label="Previous Page Spread"
             >
               <ChevronLeft className="w-6 h-6 stroke-[2.5]" />
@@ -443,7 +447,7 @@ export const BookGallery: React.FC = () => {
               onClick={handleNext}
               disabled={animating !== null}
               id="gallery-book-next-btn"
-              className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-50 p-3.5 sm:p-4 rounded-full bg-white/90 backdrop-blur-xl border border-white/95 text-blue-600 shadow-2xl hover:bg-white hover:scale-110 active:scale-95 transition-all cursor-pointer disabled:opacity-50"
+              className="absolute right-2 sm:-right-3 lg:-right-6 top-1/2 -translate-y-1/2 z-50 p-3 sm:p-4 rounded-full bg-white/90 backdrop-blur-xl border border-white/95 text-blue-600 shadow-2xl hover:bg-white hover:scale-110 active:scale-95 transition-all cursor-pointer disabled:opacity-50"
               aria-label="Next Page Spread"
             >
               <ChevronRight className="w-6 h-6 stroke-[2.5]" />
@@ -491,7 +495,9 @@ export const BookGallery: React.FC = () => {
                   src={lightboxItem.image}
                   alt={lightboxItem.title}
                   loading="lazy"
-                  className="w-full h-full object-cover"
+                  decoding="async"
+                  draggable={false}
+                  className="w-full h-full object-cover pointer-events-none select-none"
                   referrerPolicy="no-referrer"
                 />
               </div>

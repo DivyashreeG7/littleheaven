@@ -86,3 +86,16 @@ export interface EnquiryFormData {
   message: string;
   preferredTourTime?: string;
 }
+
+export interface InstagramReel {
+  id: string;
+  image: string;
+  caption: string;
+  tag: string;
+  handle: string;
+  url: string;
+  likes?: string;
+  comments?: string;
+  audioTitle?: string;
+  views?: string;
+}

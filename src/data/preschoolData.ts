@@ -1,4 +1,4 @@
-import { Program, DailyActivity, WhyFeature, GalleryItem, ParentReview, StatItem, Teacher } from '../types';
+import { Program, DailyActivity, WhyFeature, GalleryItem, ParentReview, StatItem, Teacher, InstagramReel } from '../types';
 
 import heroChildrenImg from '../assets/images/hero_preschool_children_1784886465304.jpg';
 import readingNookImg from '../assets/images/preschool_reading_nook_1784886477431.jpg';
@@ -8,22 +8,6 @@ import creativeArtsImg from '../assets/images/preschool_creative_arts_1784886500
 export const HERO_MAIN_IMAGE = heroChildrenImg;
 
 export const HERO_STATS: StatItem[] = [
-  {
-    id: 'stat-1',
-    number: 500,
-    suffix: '+',
-    label: 'Happy Students',
-    sublabel: 'Thriving in our nurturing environment',
-    icon: 'GraduationCap'
-  },
-  {
-    id: 'stat-2',
-    number: 15,
-    suffix: '+',
-    label: 'Experienced Teachers',
-    sublabel: 'Certified early-childhood educators',
-    icon: 'Award'
-  },
   {
     id: 'stat-3',
     number: 100,
@@ -39,6 +23,14 @@ export const HERO_STATS: StatItem[] = [
     label: 'Play Based Learning',
     sublabel: 'Curriculum built for curiosity',
     icon: 'Sparkles'
+  },
+  {
+    id: 'stat-5',
+    number: 24,
+    suffix: '/7',
+    label: 'Personalised App',
+    sublabel: 'Real-time updates & daily reports',
+    icon: 'Smartphone'
   }
 ];
 
@@ -46,7 +38,7 @@ export const PROGRAMS: Program[] = [
   {
     id: 'day-care',
     title: 'Day Care',
-    ageGroup: '1.5 - 2.5 Years',
+    ageGroup: '9 Months - 1 Year',
     timing: '8:00 AM - 6:00 PM',
     description: 'A home-away-from-home nurturing sanctuary focused on safety, sensory stimulation, social bonding, and gentle routine.',
     longDescription: 'Our Day Care program provides full-day peace of mind for working parents. Children enjoy balanced organic meals, restful nap routines, sensory discovery play, and individualized care from certified pediatric-trained staff in a hygienic, warm atmosphere.',
@@ -58,24 +50,10 @@ export const PROGRAMS: Program[] = [
     badgeColor: 'from-blue-500 to-sky-400'
   },
   {
-    id: 'nursery',
-    title: 'Nursery',
-    ageGroup: '3 - 4 Years',
-    timing: '9:00 AM - 12:30 PM',
-    description: 'Fostering foundational literacy, early numbers, creative expression, and interactive collaborative project work.',
-    longDescription: 'In Nursery, children step into structured wonder. We introduce phonics sounds, shape recognition, basic counting, nature exploration, and fine motor art projects that turn abstract concepts into joyful tactile experiences.',
-    iconName: 'BookOpen',
-    image: readingNookImg,
-    ratio: '1:8 Teacher Ratio',
-    keySkills: ['Phonics & Letter Sounds', 'Number Concepts 1-20', 'Fine Motor Control', 'Scientific Inquiry'],
-    features: ['Smart digital interactive boards', 'Storybook reading nooks', 'Mini botanical garden discovery', 'Guided art & clay sculpting'],
-    badgeColor: 'from-blue-600 to-indigo-400'
-  },
-  {
     id: 'play-group',
     title: 'Play Group (PG)',
     ageGroup: '2 - 3 Years',
-    timing: '9:00 AM - 12:00 PM',
+    timing: '10:00 AM - 1:00 PM',
     description: 'Encouraging natural curiosity through unstructured creative play, tactile building blocks, music, and peer socialization.',
     longDescription: 'Play Group introduces children to structured group play without academic pressure. Through song, movement, kinetic sand, building blocks, and puppet stories, toddlers learn sharing, communication, and emotional self-expression.',
     iconName: 'Sparkles',
@@ -86,31 +64,45 @@ export const PROGRAMS: Program[] = [
     badgeColor: 'from-sky-500 to-cyan-400'
   },
   {
-    id: 'lkg',
-    title: 'LKG',
-    ageGroup: '4 - 5 Years',
-    timing: '8:30 AM - 1:00 PM',
-    description: 'Developing independent problem-solving, structured reading readiness, logical math, and STEM curiosity.',
-    longDescription: 'LKG bridges play-based learning with academic readiness. Students master sight words, simple addition concepts, environmental science, coding fundamentals through physical games, and confident public speaking during Show & Tell.',
-    iconName: 'BrainCircuit',
+    id: 'nursery',
+    title: 'Nursery',
+    ageGroup: '3 - 4 Years',
+    timing: '10:00 AM - 1:00 PM',
+    description: 'Fostering foundational literacy, early numbers, creative expression, and interactive collaborative project work.',
+    longDescription: 'In Nursery, children step into structured wonder. We introduce phonics sounds, shape recognition, basic counting, nature exploration, and fine motor art projects that turn abstract concepts into joyful tactile experiences.',
+    iconName: 'BookOpen',
+    image: readingNookImg,
+    ratio: '1:8 Teacher Ratio',
+    keySkills: ['Phonics & Letter Sounds', 'Number Concepts 1-20', 'Fine Motor Control', 'Scientific Inquiry'],
+    features: ['Smart digital interactive boards', 'Storybook reading nooks', 'Mini botanical garden discovery', 'Guided art & clay sculpting'],
+    badgeColor: 'from-blue-600 to-indigo-400'
+  },
+  {
+    id: 'activity-corner',
+    title: 'Activity Corner',
+    ageGroup: 'Any Age',
+    timing: '6:00 PM - 8:00 PM',
+    description: 'Engaging evening creative workshops, indoor games, hobby crafts, and supervised interactive play.',
+    longDescription: 'Our Activity Corner provides children of all ages an inspiring evening space between 6:00 PM and 8:00 PM for creative crafts, Lego building, pottery, storytelling, and indoor games.',
+    iconName: 'Sparkles',
     image: outdoorPlayImg,
-    ratio: '1:10 Teacher Ratio',
-    keySkills: ['Sentence Building', 'Logic & Spatial Reasoning', 'STEM Hands-on Labs', 'Teamwork Projects'],
-    features: ['Early STEM mini-laboratories', 'Show & Tell auditorium sessions', 'Bilingual language exposure', 'Junior computer interactive play'],
+    ratio: 'All Age Groups',
+    keySkills: ['Creative Crafts', 'Hobby Exploration', 'Interactive Games', 'Social Bonding'],
+    features: ['Evening hobby workshops', 'Interactive board games & puzzles', 'Creative arts & painting', 'Supervised safe environment'],
     badgeColor: 'from-indigo-500 to-blue-500'
   },
   {
-    id: 'ukg',
-    title: 'UKG',
-    ageGroup: '5 - 6 Years',
-    timing: '8:30 AM - 1:30 PM',
-    description: 'Preparing future leaders with advanced literacy, creative writing, elementary mathematics, and primary school readiness.',
-    longDescription: 'UKG empowers children with supreme confidence before entering primary school. We focus on fluent reading, creative story writing, basic mental math, environmental ethics, leadership roles in class, and athletic coordination.',
-    iconName: 'Rocket',
+    id: 'after-school-program',
+    title: 'After School Program',
+    ageGroup: 'Any Age',
+    timing: '1:00 PM - 3:00 PM',
+    description: 'Comprehensive after-school care, homework assistance, reading sessions, and enrichment activities.',
+    longDescription: 'Designed for students needing productive afternoon care, our After School Program (1:00 PM - 3:00 PM) offers structured homework guidance, storybook reading, nutritious snack breaks, and quiet rest.',
+    iconName: 'BookOpen',
     image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1000',
-    ratio: '1:10 Teacher Ratio',
-    keySkills: ['Fluent Reading & Writing', 'Elementary Arithmetic', 'Public Presentation', 'Primary School Bridge'],
-    features: ['Primary school simulation weeks', 'Public speaking leadership modules', 'Chess & logical strategy games', 'Advanced sports & gymnastics'],
+    ratio: 'All Age Groups',
+    keySkills: ['Homework Support', 'Reading Fluency', 'Guided Reflection', 'Enrichment Skills'],
+    features: ['Dedicated homework guidance', 'Quiet reading & story nooks', 'Healthy snack breaks', 'Creative skill building'],
     badgeColor: 'from-sky-600 to-blue-700'
   }
 ];
@@ -207,6 +199,14 @@ export const DAILY_TIMELINE: DailyActivity[] = [
 ];
 
 export const WHY_FEATURES: WhyFeature[] = [
+  {
+    id: 'why-0',
+    title: 'Personalised App',
+    badge: 'Real-Time Updates',
+    icon: 'Smartphone',
+    description: 'Track daily activities, meal intake, nap schedules, live updates, and direct messaging with class educators.',
+    highlight: 'Dedicated parent mobile app for peace of mind'
+  },
   {
     id: 'why-1',
     title: 'Experienced Teachers',
@@ -482,5 +482,80 @@ export const TEACHERS: Teacher[] = [
     experience: '6+ Years Experience',
     avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400',
     specialty: 'Kinetic Math & Outdoor Sports'
+  }
+];
+
+export const INSTAGRAM_REELS: InstagramReel[] = [
+  {
+    id: 'reel-1',
+    image: '/reels/reel-1.png',
+    url: 'https://www.instagram.com/reel/DawzpIhPy0X/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==',
+    caption: 'Messy hands, happy hearts! Finger painting afternoon with our toddlers in Nursery. 🎨✨',
+    tag: '#LittlesHeaven',
+    handle: '@littlesheaven.official'
+  },
+  {
+    id: 'reel-2',
+    image: '/reels/reel-2.png',
+    url: 'https://www.instagram.com/reel/DQbA6m-j3Wo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    caption: 'Future architects at work! Exploring STEM geometry with colorful block towers. 🧱🚀',
+    tag: '#LittlesHeavenKids',
+    handle: '@littlesheaven.official'
+  },
+  {
+    id: 'reel-3',
+    image: '/reels/reel-3.png',
+    url: 'https://www.instagram.com/reel/DRjgFi7D75U/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    caption: 'Storytime magical corner! Today we traveled to fairytale worlds with Ms. Sarah 📚👑',
+    tag: '#LittlesHeaven',
+    handle: '@littlesheaven.official'
+  },
+  {
+    id: 'reel-4',
+    image: '/reels/reel-4.png',
+    url: 'https://www.instagram.com/reel/DVdDwq3D_sh/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    caption: 'Sunshine & smiles! Outdoor play session on our certified green play lawn ☀️🏃‍♂️',
+    tag: '#LittlesHeavenPlay',
+    handle: '@littlesheaven.official'
+  },
+  {
+    id: 'reel-5',
+    image: '/reels/reel-5.png',
+    url: 'https://www.instagram.com/reel/DTuruGPj6PQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    caption: 'Organic healthy snack time! Fresh fruits and smiles all around our dining tables 🍎🍌',
+    tag: '#LittlesHeaven',
+    handle: '@littlesheaven.official'
+  },
+  {
+    id: 'reel-6',
+    image: '/reels/reel-6.png',
+    url: 'https://www.instagram.com/reel/DRhfnOXD-KT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    caption: 'Music & Movement circle! Twirling, dancing, and finding rhythm together 🎶💃',
+    tag: '#LittlesHeavenKids',
+    handle: '@littlesheaven.official'
+  },
+  {
+    id: 'reel-7',
+    image: '/reels/reel-7.png',
+    url: 'https://www.instagram.com/reel/DXquyFTD4Tf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    caption: 'Mini botanists exploring our campus garden! Observing leaves & sensory textures 🌿🔍',
+    tag: '#LittlesHeaven',
+    handle: '@littlesheaven.official'
+  },
+  {
+    id: 'reel-8',
+    image: '/reels/reel-8.png',
+    url: 'https://www.instagram.com/reel/DbC2DgCPmRJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    caption: 'Graduation day celebrations! So proud of our bright young leaders stepping into LKG 🎉🎓',
+    tag: '#LittlesHeavenGrads',
+    handle: '@littlesheaven.official'
+  },
+  {
+    id: 'reel-9',
+    image: '/reels/reel-9.png',
+    url: 'https://www.instagram.com/reel/DNYFLObvJGg/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    caption: 'Creative learning journey filled with joy and interactive play at Little\'s Heaven! 🌟✨',
+    tag: '#LittlesHeaven',
+    handle: '@littlesheaven.official'
   }
 ];

@@ -2,7 +2,7 @@ import React from 'react';
 
 export const WhatsAppButton: React.FC = () => {
   const whatsappUrl =
-    'https://wa.me/917736181828?text=Hello%21%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20Little%27s%20Heaven%20Child%20Care%20%26%20Early%20Learning.';
+    'https://wa.me/917306426871?text=Hello%21%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20Little%27s%20Heaven%20Child%20Care%20%26%20Early%20Learning.';
 
   return (
     <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 flex items-center group pointer-events-auto select-none">

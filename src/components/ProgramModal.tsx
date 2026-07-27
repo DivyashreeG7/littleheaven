@@ -54,7 +54,9 @@ export const ProgramModal: React.FC<ProgramModalProps> = ({ program, onClose, on
               src={program.image}
               alt={program.title}
               loading="lazy"
-              className="w-full h-full object-cover"
+              decoding="async"
+              draggable={false}
+              className="w-full h-full object-cover pointer-events-none select-none"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
@@ -124,7 +126,7 @@ export const ProgramModal: React.FC<ProgramModalProps> = ({ program, onClose, on
               onEnroll(program.title);
             }}
             id="program-modal-btn-enquiry"
-            className="flex-1 sm:flex-initial px-8 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-blue-600 via-sky-500 to-blue-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 shadow-md shadow-blue-500/20 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 cursor-pointer text-center"
+            className="btn-shine-sweep flex-1 sm:flex-initial px-8 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 transition-all duration-300 shadow-md shadow-blue-600/20 hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer text-center"
           >
             <span>Enquiry</span>
             <ArrowRight className="w-4 h-4" />
